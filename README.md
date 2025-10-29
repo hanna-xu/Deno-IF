@@ -11,3 +11,5 @@ component from the noisy input through convolution nuclear norm minimization in 
 Then, the joint denoising and fusion module takes noisy source images as input and outputs the fused image. The network includes intra-modal recovery and inter-modal recovery and fusion, with self- and cross-modal attention to deal with complex individual-modal and complementary multi-modal information. 
 
 The framework of this method is shown below:
+<div align=center><img src="[https://github.com/hanna-xu/others/blob/master/images/URFusion_framework.jpg](https://github.com/hanna-xu/others/blob/master/images/Deno-IF_framework.png)" width="870" height="512"/></div>
+<br>
