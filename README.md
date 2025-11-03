@@ -39,5 +39,5 @@ scipy=1.10.1<br>
 * Choose the pretrained model:<br>
   Set `--ckpt` in `test.py` as one of the following file path:<br>
   i) `LLVIP_M3FD.pth` (for source images with relatively high resolution)<br>
-  ii) `RoadScene_M3FD.pth` (for source images with relatively low resolution).
+  ii) `RoadScene_MSRS.pth` (for source images with relatively low resolution).
 * Run `python test.py`
