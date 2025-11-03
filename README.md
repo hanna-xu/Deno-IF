@@ -13,3 +13,31 @@ Then, the joint denoising and fusion module takes noisy source images as input a
 The framework of this method is shown below:
 <div align=center><img src="https://github.com/hanna-xu/others/blob/master/images/Deno-IF_framework.png" width="870" height="512"/></div>
 <br>
+
+
+## Recommended Environment
+python=3.10<br>
+pytorch=1.13<br>
+pytorch-cuda=11.7<br>
+numpy=1.24.4<br>
+imageio=2.34.2<br>
+opencv-python=4.10<br>
+pandas=2.0.3<br>
+pillow=10.4<br>
+scikit-image=0.21
+scipy=1.10.1<br>
+
+## __To train:__
+* Prepare the training data:<br>
+  Put the training data in `./datasets/train/vis/` and `./datasets/train/ir/`
+* Run `python train.py`
+
+
+## __To Test:__
+* Prepare the test data:<br>
+  put the test data in `./datasets/test/vis/` and `./datasets/test/ir/`
+* Choose the pretrained model:<br>
+  Set `--ckpt` in `test.py` as one of the following file path:<br>
+  i) `LLVIP_M3FD.pth` (for source images with relatively high resolution)<br>
+  ii) `RoadScene_M3FD.pth` (for source images with relatively low resolution).
+* Run `python test.py`
