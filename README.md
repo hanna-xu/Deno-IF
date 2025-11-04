@@ -24,7 +24,7 @@ imageio=2.34.2<br>
 opencv-python=4.10<br>
 pandas=2.0.3<br>
 pillow=10.4<br>
-scikit-image=0.21
+scikit-image=0.21<br>
 scipy=1.10.1<br>
 
 ## __To train:__
