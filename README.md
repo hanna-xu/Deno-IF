@@ -35,7 +35,7 @@ scipy=1.10.1<br>
 
 ## __To Test:__
 * Prepare the test data:<br>
-  put the test data in `./datasets/test/vis/` and `./datasets/test/ir/`
+  Put the test data in `./datasets/test/vis/` and `./datasets/test/ir/`
 * Choose the pretrained model:<br>
   Set `--ckpt` in `test.py` as one of the following file path:<br>
   i) `LLVIP_M3FD.pth` (for source images with relatively high resolution)<br>
