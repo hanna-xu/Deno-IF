@@ -132,14 +132,7 @@ def nuclear_norm(x):
 
 
 def rgb2gray(x):
-    return 0.03 * x[:, 0:1, :, :] + 0.59 * x[:, 1:2, :, :] + 0.11 * x[:, 2:3, :, :]
-
-
-def rgb2gray(tensor):
-    R = tensor[:, 0:1, :, :]
-    G = tensor[:, 0:1, :, :]
-    B = tensor[:, 0:1, :, :]
-    return 0.2989 * R + 0.5870 * G + 0.1140 * B
+    return 0.2989 * x[:, 0:1, :, :] + 0.5870 * x[:, 1:2, :, :] + 0.1140 * x[:, 2:3, :, :]
 
 
 def ycbcr2rgb(img_ycbcr):
