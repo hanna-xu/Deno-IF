@@ -25,6 +25,8 @@ class MDTA(nn.Module):
         q, k = F.normalize(q, dim=-1), F.normalize(k, dim=-1)
 
         attn = torch.softmax(torch.matmul(q, k.transpose(-2, -1).contiguous()) * self.temperature, dim=-1)
+        if torch.isnan(attn).any():
+            attn = torch.ones_like(attn) / attn.size(-1)
         out = self.project_out(torch.matmul(attn, v).reshape(b, -1, h, w))
         return out
 
@@ -152,4 +154,5 @@ class FusionNet(nn.Module):
             out = torch.clamp(self.output(fr) + max_fused, 0, 1)
         else:
             out = torch.clamp(self.output(fr), 0, 1)
+
         return max_fused, out
